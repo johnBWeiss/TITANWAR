@@ -1,8 +1,8 @@
 // localStorage.clear()
 
+s
 
 
-aa
 
 //TODO remove event listetenr if clicked, then put it back at the end, so wont be able to click a few times and drive it crazy
 // use a function that geta agrument of true or false t know if it adds or removes event listener to all the cards
