@@ -97,7 +97,6 @@ function winGame() {
             let descendingList = tempest.sort(function (a, b) { return b.score - a.score });
             let standing = descendingList.findIndex(v => v.score == highScoreList.score)
             standing++ //&& v.score == highScoreList.score })
-            //TODO
 
             localStorage.setItem("highScoreList", JSON.stringify(descendingList))
             highScores(descendingList, standing)
