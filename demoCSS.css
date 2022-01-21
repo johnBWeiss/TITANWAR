@@ -1,0 +1,507 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.wrapper {
+  display: flex;
+  /* background-color: black; */
+  position: absolute;
+  margin-top: -5%;
+  /* margin: 20; */
+  text-align: center;
+  padding-bottom: 13.1%;
+  /* box-sizing: border-box; */
+  height: 170vh;
+  /* padding-top: 8%; */
+}
+
+.hourGlass {
+  width: 100%;
+}
+
+.hourGlass:hover {
+  transform: rotatez(3600deg);
+
+  transition-duration: 10s;
+}
+
+.header {
+  display: static;
+  width: 400px;
+  margin-top: 10%;
+}
+
+.titanWar {
+  font-size: 5.8em;
+  font-family: enchanted land;
+  color: rgb(36, 23, 2);
+  margin-top: 2.7%;
+  text-align: center;
+  margin-right: -10.2%;
+  margin-left: 15%;
+  width: 100%;
+  display: static;
+}
+
+.titanWar:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(103%);
+}
+
+.countDown:hover {
+  transform: scale(109%);
+  color: rgb(196, 196, 148);
+}
+
+.points {
+  position: static;
+  width: 100%;
+  padding: 1%;
+  text-align: center;
+  /* position: absolute;
+    left: 0%;
+    right: 5%; */
+  margin-bottom: 8%;
+  /* margin-left: 40%; */
+
+  font-size: 100%;
+  font-family: enchanted land;
+  background-color: rgb(46, 17, 17);
+  /* padding: 2px; */
+  /* position: fixed; */
+  /* width: 10%; */
+  border-radius: 9%;
+  color: rgb(255, 255, 255);
+}
+
+.left {
+  /* margin-right: 60%; */
+  /* position: absolute; */
+
+  /* left: 1;
+    right: 3; */
+  margin-top: 1.5%;
+  margin-right: 5%;
+  margin-left: 14%;
+  margin-top: 10%;
+  font-size: 2em;
+  width: 12%;
+}
+
+.countDown {
+  width: 100%;
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 5%;
+  color: rgb(119, 103, 13);
+  font-family: enchanted land;
+}
+
+.titanHits {
+  position: static;
+  width: 100%;
+  padding: 1%;
+  text-align: center;
+  margin-bottom: 8%;
+  margin-top: 10%;
+  font-size: 100%;
+  font-family: enchanted land;
+  background-color: rgb(39, 33, 33);
+  border-radius: 9%;
+  color: rgb(255, 255, 255);
+}
+
+.leftSideHero {
+  position: static;
+  width: 100%;
+  text-align: center;
+  padding: 1%;
+  margin-bottom: 8%;
+  font-size: 100%;
+  font-family: enchanted land;
+  background-color: rgb(59, 40, 10);
+  border-radius: 9%;
+  color: rgb(255, 255, 255);
+}
+
+.center {
+  display: flex;
+  flex-wrap: wrap;
+  height: 420px;
+  width: 450px;
+  text-align: center;
+  margin-top: 3%;
+  margin-left: 12%;
+  font-size: 0%;
+}
+
+.right {
+  position: relative;
+  width: 24%;
+  margin-top: 20%;
+  margin-left: 12%;
+  animation-name: villain;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.villain {
+  width: 100%;
+}
+
+@keyframes villain {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  35% {
+    left: 10px;
+    top: -30px;
+    transform: scale(110%);
+  }
+
+  75% {
+    left: -20px;
+    top: 30px;
+    transform: scale(105%);
+  }
+
+  100% {
+    left: 10px;
+    top: 50px;
+    transform: scale(100%);
+  }
+}
+
+.card {
+  height: 100px;
+  width: 100px;
+  margin: 3px;
+  /* margin-right: 2px;
+    /* margin-left: 2px; */
+  /* margin-top: 2px;  */
+  cursor: pointer;
+  /* display: inline-block; */
+  /* position: relative; */
+  border-radius: 5%;
+  /* object-fit: cover; */
+}
+
+.cardPicked {
+  transform: rotatey(180deg);
+  transition-duration: 0.7s;
+  /* transform-style: preserve-3d; */
+  /* transform-style: preserve-3d; */
+  height: 100px;
+  width: 100px;
+  margin: 3px;
+  /* margin-right: 2px;
+    /* margin-left: 2px; */
+  /* margin-top: 2px;  */
+  cursor: pointer;
+  /* display: inline-block; */
+  /* position: relative; */
+  border-radius: 5%;
+  /* object-fit: cover; */
+}
+
+.endGame {
+  display: none;
+}
+
+.gameOver {
+  width: 100%;
+  height: 300px;
+  display: static;
+  border-radius: 30%;
+  margin-top: 5%;
+}
+
+.wrong {
+  transform: rotatey(0deg);
+  transition-duration: 0.6s;
+  height: 100px;
+  width: 100px;
+  margin: 3px;
+
+  cursor: pointer;
+
+  border-radius: 5%;
+}
+
+.wrong:hover {
+  border: 3px solid goldenrod;
+  box-sizing: border-box;
+}
+
+/* .cardPicked:hover {
+    border: 3px solid goldenrod;
+    box-sizing: border-box;
+} */
+
+.leftSideText:hover {
+  transform: scale(106%);
+}
+
+.leftSideHero:hover {
+  transform: scale(111%);
+  background-color: black;
+}
+
+.titanHits:hover {
+  transform: scale(111%);
+  background-color: black;
+}
+
+.points:hover {
+  transform: scale(111%);
+  background-color: black;
+}
+
+.titanHitsShake {
+  transform: scale(110%);
+  position: static;
+  width: 100%;
+  padding: 1%;
+  text-align: center;
+  margin-bottom: 8%;
+  margin-top: 10%;
+  font-size: 100%;
+  font-family: enchanted land;
+  background-color: rgb(216, 205, 205);
+  border-radius: 9%;
+  color: rgb(173, 49, 32);
+}
+
+.heroShake {
+  /* height: 18%; */
+  transform: scale(103%);
+  transform: rotateZ(10deg);
+  /* transition-duration: 0.2s; */
+  /* transform: rotateX(360deg); */
+  /* font-size: 3em;
+    font-family: enchanted land;
+    background-color: rgb(59, 10, 10);
+    /* padding: 2px; */
+  /* position: fixed; */
+  /* width: 10%; */
+  border-radius: 9%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-right: 85%;
+  margin-top: 2%;
+}
+
+.heroShake2 {
+  transform: rotateZ(90deg);
+  transition-duration: 0.4s;
+  font-size: 3em;
+  font-family: enchanted land;
+  /* background-color: rgb(73, 62, 62); */
+  /* padding: 2px; */
+  /* position: fixed; */
+  /* width: 10%; */
+  border-radius: 9%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-right: 85%;
+  margin-top: 2%;
+}
+
+.card:hover {
+  border: 3px solid goldenrod;
+  box-sizing: border-box;
+}
+
+.villain:hover {
+  cursor: grab;
+}
+
+.villainBig1 {
+  transform: scale(103%);
+  animation-name: villainBig;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* @keyframes villainBig {
+    20% {
+        transform: scale(106%);
+
+    }
+
+    40% {
+        transform: scale(106%);
+    }
+
+    70% {
+        transform: scale(109%);
+
+    }
+
+    100% {
+        transform: scale(112);
+
+    }
+
+} */
+
+.villainBig2 {
+  transform: scale(106%);
+}
+
+.villainBig3 {
+  transform: scale(109%);
+}
+
+.villainBig4 {
+  transform: scale(112%);
+}
+
+.gridShake {
+  transform: scale(101%);
+  /* transition-duration: 0.2; */
+  display: flex;
+  flex-wrap: wrap;
+  height: 420px;
+  width: 450px;
+  text-align: center;
+  margin-top: 3%;
+  margin-left: 11%;
+  font-size: 0%;
+}
+
+.gridShakeWin {
+  transform: scale(90%);
+  transition-duration: 0.2s;
+  display: flex;
+  flex-wrap: wrap;
+  height: 420px;
+  width: 450px;
+  text-align: center;
+  margin-top: 3%;
+  margin-left: 9%;
+  font-size: 0%;
+  /*set to a negative number 1/2 of your height*/
+  /* margin-left: -15em;  */
+}
+
+.playAgain {
+  display: flex;
+  color: white;
+  font-size: 4em;
+  margin-top: 6%;
+  width: 80%;
+  margin-left: 28%;
+  font-family: enchanted land;
+}
+
+.losePlayAgain {
+  display: flex;
+  color: white;
+  font-size: 0.6em;
+  margin-top: 6%;
+  width: 80%;
+  margin-left: 17%;
+  font-family: enchanted land;
+}
+
+.winTitle {
+  display: static;
+  color: white;
+  font-size: 3em;
+  width: 100%;
+  margin-top: 9%;
+  margin-bottom: 9%;
+  margin-left: 15%;
+  margin-right: 7%;
+  padding: 2%;
+  background-color: rgb(43, 36, 36);
+  border: 1px solid white;
+  font-family: enchanted land;
+}
+
+.endScoreList {
+  display: static;
+
+  color: white;
+  font-size: 3em;
+  width: 104%;
+  margin-top: 8%;
+  margin-left: 15%;
+  margin-right: 3%;
+  padding: 0%;
+  background-color: rgb(87, 61, 61);
+  border: 1px solid white;
+  font-family: enchanted land;
+}
+
+.endScoreTitle {
+  display: static;
+  border-radius: 3%;
+  color: white;
+  font-size: 3.5em;
+  width: 110%;
+  margin-top: 8%;
+  margin-left: 6%;
+  margin-right: 15%;
+  padding: 5%;
+  background-color: rgb(59, 20, 20);
+  border: 2px solid white;
+  font-family: enchanted land;
+  animation-name: endScoreTitle;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes endScoreTitle {
+  20% {
+    /* background-color: rgb(58, 39, 39); */
+    color: gold;
+    border: 2px solid black;
+    font-size: 3.6em;
+  }
+
+  50% {
+    /* background-color: rgb(85, 61, 30); */
+    color: gold;
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 3.7em;
+  }
+
+  75% {
+    border: 2px solid rgb(0, 0, 0);
+    /* background-color: rgb(110, 70, 17); */
+    font-size: 3.6em;
+  }
+}
+
+p {
+  width: 100%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-top: 7%;
+  font-size: 2rem;
+  margin-left: 14.8%;
+  animation: design 4s infinite linear alternate;
+}
+
+@keyframes design {
+  0% {
+    color: rgb(0, 0, 0);
+  }
+
+  50% {
+    color: rgb(99, 62, 13);
+    transform: scale(105%);
+
+    /* margin-top: 1.5%; */
+  }
+}

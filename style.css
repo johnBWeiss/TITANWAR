@@ -1,0 +1,376 @@
+/* @media (max-width:700px){
+.card
+
+} */
+/* .wrapper {} */
+
+.countDown {
+
+    background-color: gold;
+    max-width: 448px;
+    text-align: center;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    font-size: 0.5cm;
+    margin-bottom: 1%;
+    border-radius: 15%;
+}
+
+
+
+.cardPicked {
+    transform: rotatey(180deg);
+    transition-duration: 0.7s;
+    /* transform-style: preserve-3d; */
+    /* transform-style: preserve-3d; */
+    height: 100px;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-top: 3px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    border-radius: 5%;
+}
+
+.wrong {
+    transform: rotatey(0deg);
+    transition-duration: 0.6s;
+    /* transform-style: preserve-3d; */
+    /* transform-style: preserve-3d; */
+    height: 100px;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-top: 3px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    border-radius: 5%;
+}
+
+.cardPicked:hover {
+    border: 3px solid goldenrod;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    margin: 0
+}
+
+.leftAnchor {
+
+    /* position: fixed; */
+    margin-left: 10%;
+    /* margin-bottom: 90%; */
+    margin-top: -15.5em;
+}
+
+.leftSideText:hover {
+    transform: scale(103%)
+}
+
+.leftSideHero:hover {
+    transform: scale(103%)
+}
+
+
+.leftSideText {
+    /* height: 18%; */
+    font-size: 3em;
+    font-family: enchanted land;
+    background-color: rgb(0, 0, 0);
+    /* padding: 2px; */
+    /* position: fixed; */
+    /* width: 10%; */
+    border-radius: 9%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-right: 85%;
+    /* margin-top: 0; */
+    /* margin-right: 20px; */
+}
+
+.titanShake {
+    transform: scale(110%);
+    font-size: 3em;
+    font-family: enchanted land;
+    background-color: rgb(207, 204, 9);
+    /* padding: 2px; */
+    /* position: fixed; */
+    /* width: 10%; */
+    border-radius: 9%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-right: 85%;
+
+
+
+}
+
+.leftSideHero {
+    /* height: 18%; */
+    font-size: 3em;
+    font-family: enchanted land;
+    background-color: rgb(59, 40, 10);
+    /* padding: 2px; */
+    /* position: fixed; */
+    /* width: 10%; */
+    border-radius: 9%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-right: 85%;
+    margin-top: 2%;
+
+}
+
+
+.heroShake {
+    /* height: 18%; */
+    transform: scale(106%);
+    transform: rotateZ(10deg);
+    /* transform: rotateX(360deg); */
+    font-size: 3em;
+    font-family: enchanted land;
+    background-color: rgb(59, 10, 10);
+    /* padding: 2px; */
+    /* position: fixed; */
+    /* width: 10%; */
+    border-radius: 9%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-right: 85%;
+    margin-top: 2%;
+
+}
+
+.heroShake2 {
+    transform: rotateZ(90deg);
+    transition-duration: 0.4s;
+    font-size: 3em;
+    font-family: enchanted land;
+    /* background-color: rgb(73, 62, 62); */
+    /* padding: 2px; */
+    /* position: fixed; */
+    /* width: 10%; */
+    border-radius: 9%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-right: 85%;
+    margin-top: 2%;
+}
+
+
+
+.centerAnchor {
+
+
+    margin: 0px auto;
+    position: relative;
+    margin-left: 20%;
+    position: absolute;
+}
+
+
+
+/* .correct {
+    background-image: url(111.gif)
+} */
+
+h1 {
+
+    color: rgb(41, 35, 3);
+    size: 300px;
+    margin-left: 37%;
+    font-size: 3.5em;
+}
+
+h1:hover {
+    transform: rotate(0.9deg);
+    transition-duration: 0.6s;
+    cursor: pointer;
+}
+
+.grey {
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    margin-right: 1.5px;
+    margin-left: 1.5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+.card:hover {
+    border: 3px solid goldenrod;
+    box-sizing: border-box;
+}
+
+
+
+.card {
+
+    background-color: grey;
+    height: 100px;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-top: 3px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    border-radius: 5%;
+
+
+}
+
+.rightAnchor {
+
+    /* position: relative; */
+    margin-left: 70%;
+    /* margin-top: auto; */
+    /* position: fixed; */
+    height: 300px;
+    width: 300px;
+    /* margin-top: 15%; */
+}
+
+.villain {
+
+    height: 50%;
+    /* margin-right: 40%; */
+    margin-top: 3%;
+    right: 5%;
+    position: fixed;
+}
+
+.villain:hover {
+    transform: scale(103%);
+    cursor: grab;
+}
+
+.villainBig1 {
+    transform: scale(103%);
+    height: 50%;
+    /* margin-right: 40%; */
+    margin-top: 3%;
+    right: 5%;
+    position: fixed;
+
+}
+
+.villainBig2 {
+    transform: scale(106%);
+    height: 50%;
+    /* margin-right: 40%; */
+    margin-top: 3%;
+    right: 5%;
+    position: fixed;
+
+}
+
+
+.villainBig3 {
+    transform: scale(109%);
+    height: 50%;
+    /* margin-right: 40%; */
+    margin-top: 3%;
+    right: 5%;
+    position: fixed;
+
+}
+
+.villainBig4 {
+    transform: scale(112%);
+    height: 50%;
+    /* margin-right: 40%; */
+    margin-top: 3%;
+    right: 5%;
+    position: fixed;
+
+}
+
+
+
+.grid {
+    transform: scale(100%);
+    transition-duration: 0.2s;
+    max-width: 100%;
+    /* text-align: center; */
+    /* max-width: 500px; */
+    position: fixed;
+    /* margin-right: auto;
+    margin-left: auto;
+    margin-top: 0%;
+    /* margin: 0 auto; */
+    padding-top: 0px;
+    top: 45%;
+    left: 50%;
+    width: 500px;
+    height: 18em;
+    margin-top: -9em;
+    /*set to a negative number 1/2 of your height*/
+    margin-left: -15em;
+
+}
+
+.gridShake {
+    transform: scale(106%);
+    transition-duration: 0.2;
+    max-width: 100%;
+    /* text-align: center; */
+    /* max-width: 500px; */
+    position: fixed;
+    /* margin-right: auto;
+    margin-left: auto;
+    margin-top: 0%;
+    /* margin: 0 auto; */
+    padding-top: 0px;
+    top: 45%;
+    left: 50%;
+    width: 500px;
+    height: 18em;
+    margin-top: -9em;
+    /*set to a negative number 1/2 of your height*/
+    margin-left: -15em;
+
+}
+
+.gridShakeWin {
+
+    transform: scale(90%);
+    transition-duration: 0.2s;
+    max-width: 100%;
+    text-align: center;
+
+    max-width: 500px;
+    position: fixed;
+    padding-top: 0px;
+    top: 45%;
+    left: 50%;
+    width: 500px;
+    height: 18em;
+    margin-top: -9em;
+    /*set to a negative number 1/2 of your height*/
+    /* margin-left: -15em;  */
+
+}
+
+/* .gridShakeWin2 {
+
+    transform: scale(70%);
+    transition-duration: 0.2s;
+    max-width: 100%;
+    text-align: center;
+    /* max-width: 500px; */
+/* position: fixed;
+top: 45%;
+left: 50%;
+width: 500px;
+height: 18em;
+margin-top: -9em;
+}
+
+*/
