@@ -12,7 +12,8 @@
   text-align: center;
   padding-bottom: 13.1%;
   /* box-sizing: border-box; */
-  height: 170vh;
+  height: 100vh;
+  overflow-y: auto;
   /* padding-top: 8%; */
 }
 
