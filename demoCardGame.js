@@ -111,7 +111,7 @@ function highScores(list, standing) {
 
 
         let playAgain = document.createElement("a")
-        playAgain.setAttribute("href", "file:///C:/Users/Yoni/Dropbox/full%20stack%20beta/memory%20with%20effects/demoHTML.html")
+        playAgain.setAttribute("href", "https://titanwar.netlify.app/")
 
         playAgain.innerText = "PLAY AGAIN";
         playAgain.classList.add("playAgain")
