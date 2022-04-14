@@ -1,12 +1,84 @@
-// localStorage.clear()
+let cardsFlipped = []
+let cardsID = []
+let imgArray = [{ img: "0.jpg" }, { img: "1.jpg" }, { img: "2.png" }, { img: "3.jpg" }, { img: "4.png" },
+{ img: "5.jpg" }, { img: "6.jpg" }, { img: "8.png" },
+{ img: "0.jpg" }, { img: "1.jpg" }, { img: "2.png" }, { img: "3.jpg" }, { img: "4.png" },
+{ img: "5.jpg" }, { img: "6.jpg" }, { img: "8.png" }]
+
+let titanEffects = ["titanHits.wav", "titanVoice3.wav", "titanVoice1.wav", "titanVoice2.wav", "titanVoice4.wav"]
+let titanLoseEffects = ["", "hurt1", "hurt2", "hurt3", "hurt4", "hurt5"]
+let titanWinEffects = ["loseLife2.wav", "attack1.wav", "attack2.wav", "attack3.wav", "attack4.wav"]
+let score = 0
+let heroLife = 7
+let cardNumber = 16
+let temp
+let time = 999
 
 
+setInterval(() => {
+
+    document.querySelector(".villain").classList.toggle("villainAnimation")
+
+}
+    , 450)
+let highScore = time + heroLife + score
+
+let timer = document.createElement("div")
+timer.innerText = `${time}`
+timer.classList.add("countDown")
+document.querySelector(".left").appendChild(timer)//formerly class grid
+let count = setInterval(() => {
+    time = time - 1
+    timer.innerText = `${time}`
+
+}
+    , 1000)
+
+let keeper = setInterval(() => {
+
+    document.querySelector(".points").innerText = `score \n ${time + heroLife * 20 + score * 30}`
+
+}
+    , 1)
+
+setTimeout(() => clearInterval(count, keeper), 1000000)
 
 
+let hourGlass = document.createElement("img")
+hourGlass.src = "hourGlass.gif"
+hourGlass.classList.add("hourGlass")
+hourGlass.addEventListener("mouseover", () =>
+    new Audio("hourGlass.wav").play()
 
-//TODO remove event listetenr if clicked, then put it back at the end, so wont be able to click a few times and drive it crazy
-// use a function that geta agrument of true or false t know if it adds or removes event listener to all the cards
-console.log(localStorage);
+)
+document.querySelector(".left").appendChild(hourGlass)
+
+let titanHits = document.createElement("div")
+titanHits.classList.add("titanHits")
+titanHits.innerText = `Titan Hits \n ${score}`
+
+document.querySelector(".left").appendChild(titanHits)//formerly lefs anchor
+
+
+let hero = document.createElement("div")
+hero.classList.add("leftSideHero")
+hero.innerText = `Hero Life \n ${heroLife}`
+document.querySelector(".left").appendChild(hero)
+
+
+let points = document.createElement("div")
+points.classList.add("points")
+points.innerText = `score \n ${highScore}`
+document.querySelector(".left").appendChild(points)
+
+
+let titanWar = document.createElement("div")
+let header = document.querySelector(".header")
+titanWar.classList.add("titanWar")
+let tmp = "TITAN" + "    " + "WAR"
+titanWar.innerText = tmp
+header.insertBefore(titanWar, header.firstChild);
+
 function highScores(list, standing) {
     console.log(standing);
     setTimeout(() => {
@@ -15,7 +87,6 @@ function highScores(list, standing) {
         document.querySelector(".titanWar").remove()
 
         let userPlace = document.createElement("div")
-        // tempi.src = "winner.gif"
         userPlace.classList.add("endScoreTitle")
         userPlace.innerText = `your score is number ${standing} on the all time list. congrats!`
         document.querySelector(".winTitleHidden").appendChild(userPlace)
@@ -23,7 +94,6 @@ function highScores(list, standing) {
 
         let wempi
         wempi = document.createElement("div")
-        // tempi.src = "winner.gif"
         wempi.classList.add("winTitle")
         wempi.innerHTML = `High Scores`
         document.querySelector(".winTitleHidden").appendChild(wempi)
@@ -33,15 +103,11 @@ function highScores(list, standing) {
         let tempi
         for (let d = 0; d < list.length; d++) {
             tempi = document.createElement("div")
-            // tempi.src = "winner.gif"
             tempi.classList.add("endScoreList")
             tempi.innerHTML = `${list[d].name}  <br> ${list[d].score}`
-            // let pos =
             document.querySelector(".winTitleHidden").appendChild(tempi)
 
         }
-
-
 
 
         let playAgain = document.createElement("a")
@@ -50,7 +116,6 @@ function highScores(list, standing) {
         playAgain.innerText = "PLAY AGAIN";
         playAgain.classList.add("playAgain")
         document.querySelector(".header").appendChild(playAgain);
-        // document.querySelector(".left").appendChild(playAgain);
 
     }, 2000);
 }
@@ -58,7 +123,6 @@ function highScores(list, standing) {
 
 function winGame() {
     new Audio("victory.wav").play()
-    // getElementByName("h1").innerText = "victory!"
     clearInterval(count)
     clearInterval(keeper)
 
@@ -138,95 +202,6 @@ function winGame() {
 
 
 }
-
-
-let cardsFlipped = []
-let cardsID = []
-let imgArray = [{ img: "0.jpg" }, { img: "1.jpg" }, { img: "2.png" }, { img: "3.jpg" }, { img: "4.png" },
-{ img: "5.jpg" }, { img: "6.jpg" }, { img: "8.png" },
-{ img: "0.jpg" }, { img: "1.jpg" }, { img: "2.png" }, { img: "3.jpg" }, { img: "4.png" },
-{ img: "5.jpg" }, { img: "6.jpg" }, { img: "8.png" }]
-
-let titanEffects = ["titanHits.wav", "titanVoice3.wav", "titanVoice1.wav", "titanVoice2.wav", "titanVoice4.wav"]
-let titanLoseEffects = ["", "hurt1", "hurt2", "hurt3", "hurt4", "hurt5"]
-let titanWinEffects = ["loseLife2.wav", "attack1.wav", "attack2.wav", "attack3.wav", "attack4.wav"]
-let score = 0
-let heroLife = 7
-let cardNumber = 16
-let temp
-let time = 999
-
-
-setInterval(() => {
-
-    document.querySelector(".villain").classList.toggle("villainAnimation")
-
-}
-    , 450)
-// setInterval(() => document.querySelector(".left"))
-let highScore = time + heroLife + score
-
-let timer = document.createElement("div")
-timer.innerText = `${time}`
-timer.classList.add("countDown")
-document.querySelector(".left").appendChild(timer)//formerly class grid
-let count = setInterval(() => {
-    time = time - 1
-    timer.innerText = `${time}`
-    // document.querySelector(".points").innerText = `score \n ${time + heroLife * 20 + score * 30}`
-
-}
-    , 1000)
-
-let keeper = setInterval(() => {
-
-    document.querySelector(".points").innerText = `score \n ${time + heroLife * 20 + score * 30}`
-
-}
-    , 1)
-
-setTimeout(() => clearInterval(count, keeper), 1000000)
-
-// setTimeout(() => clearInterval(keeper), 1000000)
-
-
-let hourGlass = document.createElement("img")
-hourGlass.src = "hourGlass.gif"
-hourGlass.classList.add("hourGlass")
-hourGlass.addEventListener("mouseover", () =>
-    new Audio("hourGlass.wav").play()
-
-)
-document.querySelector(".left").appendChild(hourGlass)
-
-let titanHits = document.createElement("div")
-titanHits.classList.add("titanHits")
-titanHits.innerText = `Titan Hits \n ${score}`
-// titanHits.addEventListener("mouseover", () =>
-//     new Audio("???.wav").play()
-// )
-document.querySelector(".left").appendChild(titanHits)//formerly lefs anchor
-
-
-let hero = document.createElement("div")
-hero.classList.add("leftSideHero")
-hero.innerText = `Hero Life \n ${heroLife}`
-document.querySelector(".left").appendChild(hero)
-
-
-let points = document.createElement("div")
-points.classList.add("points")
-points.innerText = `score \n ${highScore}`
-document.querySelector(".left").appendChild(points)
-
-
-let titanWar = document.createElement("div")
-let header = document.querySelector(".header")
-titanWar.classList.add("titanWar")
-let tmp = "TITAN" + "    " + "WAR"
-titanWar.innerText = tmp
-header.insertBefore(titanWar, header.firstChild);
-
 
 function shuffle() {
     let ran = randomNum(0, 15);
@@ -476,8 +451,7 @@ function checkMatch() {
     let x = titanHits
 
     if (cardsID[0] === cardsID[1]) {// redirect this to function, this is duplicate code
-        // new Audio("flipCard.wav").play()
-        // new Audio("loseLife2.wav").play()
+
         let effect = titanWinEffects[i]
         new Audio(effect).play()
         i += 1
